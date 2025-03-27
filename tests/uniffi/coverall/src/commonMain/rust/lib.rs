@@ -10,6 +10,8 @@ use std::time::SystemTime;
 use once_cell::sync::Lazy;
 
 mod traits;
+mod addition;
+
 pub use traits::{
     ancestor_names, get_string_util_traits, get_traits, make_rust_getters, test_getters,
     test_round_trip_through_foreign, test_round_trip_through_rust, Getters, NodeTrait, StringUtil,
