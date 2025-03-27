@@ -111,8 +111,8 @@ actual open class {{ impl_class_name }}: Disposable, {{ interface_name }} {
 
     fun uniffiClonePointer(): Pointer {
         return uniffiRustCall { status ->
-            UniffiLib.INSTANCE.{{ obj.ffi_object_clone().name() }}(pointer!!, status)!!
-        }
+            UniffiLib.INSTANCE.{{ obj.ffi_object_clone().name() }}(pointer!!, status)
+        }!!
     }
 
     {% for meth in obj.methods() -%}
